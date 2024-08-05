@@ -15,13 +15,23 @@ for (let i = 0; i < rows; i++) {
     gridItem.classList.add("grid-item");
     
     // Add a number to grid-item
-    const gridText = document.createElement("div");
+    /*const gridText = document.createElement("div");
     gridText.classList.add("grid-number");
     gridText.textContent = j + 1;
-    gridItem.appendChild(gridText);
-
+    gridItem.appendChild(gridText);*/
+    
     // Append the grid item to the container;
     gridRow.appendChild(gridItem);
   }
   grid.appendChild(gridRow);
 }
+
+// Get all grid items
+const gridItems = document.querySelectorAll(".grid-item");
+
+// Set grid items to active when hovered
+gridItems.forEach((gridItem) => {
+  gridItem.addEventListener("mouseover", (event) => {
+  event.target.classList.add("active");
+  })
+})
