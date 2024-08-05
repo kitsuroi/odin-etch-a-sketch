@@ -13,6 +13,7 @@ for (let i = 0; i < rows; i++) {
   for (let j = 0; j < columns; j++) {
     const gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
+    
     // Add a number to grid-item
     const gridText = document.createElement("div");
     gridText.classList.add("grid-number");
