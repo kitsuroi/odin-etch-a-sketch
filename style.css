@@ -21,8 +21,6 @@ body {
   border: 1px solid #000;
   flex-basis: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .active {
