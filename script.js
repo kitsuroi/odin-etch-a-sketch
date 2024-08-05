@@ -44,7 +44,13 @@ function createGrid(gridSize){
   // Set grid items to active when hovered
   gridItems.forEach((gridItem) => {
     gridItem.addEventListener("mouseover", (event) => {
-    event.target.classList.add("active");
+    //event.target.classList.add("active");
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    event.target.style.backgroundColor = "#" + randomColor;
+    event.target.style.opacity -= "-0.1";
+    if (event.target.style.opacity >= 1) {
+      event.target.style.backgroundColor = "black";
+    }
     })
   })
 }
